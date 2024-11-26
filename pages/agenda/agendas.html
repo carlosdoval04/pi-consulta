@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendas - Dent&Vida</title>
+    <link rel="stylesheet" href="agendas.css">
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./../consulta/consultas.html">Consultas</a></li>
+                <li><a href="agendas.html">Agendas</a></li>
+                <li><a href="./../cliente/clientes.html">Clientes</a></li>
+                <li><a href="./../dentista/dentistas.html">Dentistas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título da Página -->
+    <main>
+        <h1>Gerenciamento de Agendas</h1>
+
+        <!-- Tabela de Agendas (onde as agendas serão exibidas) -->
+        <table id="agendasTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Dentista</th>
+                    <th>Data</th>
+                    <th>Cliente</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Modal de Agenda -->
+        <div id="agendaModal" class="modal">
+            <div class="modal-content">
+                <span id="closeAgendaModal">&times;</span>
+                <form id="agendaForm">
+                    <input type="hidden" id="agendaId">
+                    <label for="agendaDentista">Dentista:</label>
+                    <input type="text" id="agendaDentista" required>
+
+                    <label for="agendaDate">Data:</label>
+                    <input type="date" id="agendaDate" required>
+
+                    <label for="agendaCliente">Cliente:</label>
+                    <input type="text" id="agendaCliente" required>
+
+                    <button type="submit">Salvar Agenda</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Botão para adicionar agenda -->
+        <button id="addAgendaBtn">Adicionar Agenda</button>
+    </main>
+
+    <script src="agendas.js"></script>
+</body>
+</html>

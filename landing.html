@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dent&Vida - Consultório</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <header>
+        <h1>Dent&Vida</h1>
+        <button id="loginBtn" class="login-btn">Login</button>
+    </header>
+
+    <section class="hero">
+        <h2>Bem-vindo ao Consultório Dent&Vida</h2>
+        <p>Agende suas consultas de forma rápida e prática.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dent&Vida - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginModal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit" id="loginSubmitBtn">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>

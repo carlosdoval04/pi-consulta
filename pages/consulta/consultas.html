@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas - Dent&Vida</title>
+    <link rel="stylesheet" href="consultas.css">
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="consultas.html">Consultas</a></li>
+                <li><a href="./../agenda/agendas.html">Agendas</a></li>
+                <li><a href="./../cliente/clientes.html">Clientes</a></li>
+                <li><a href="./../dentista/dentistas.html">Dentistas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título da Página -->
+    <main>
+        <h1>Gerenciamento de Consultas</h1>
+
+        <!-- Tabela de Consultas (onde as consultas são exibidas) -->
+        <table id="consultationsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Dentista</th>
+                    <th>Hora</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Modal de Consulta -->
+        <div id="consultationModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal">&times;</span>
+                <form id="consultationForm">
+                    <input type="hidden" id="consultationId">
+                    <label for="patientName">Nome do Cliente:</label>
+                    <input type="text" id="patientName" required>
+
+                    <label for="consultationDate">Data:</label>
+                    <input type="date" id="consultationDate" required>
+
+                    <label for="consultationTime">Hora:</label>
+                    <input type="time" id="consultationTime" required>
+
+                    <button type="submit">Salvar Consulta</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Botão para adicionar consulta -->
+        <button id="addConsultationBtn">Adicionar Consulta</button>
+    </main>
+
+    <script src="consultas.js"></script>
+</body>
+</html>

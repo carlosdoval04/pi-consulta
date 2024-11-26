@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Dentistas</title>
+    <link rel="stylesheet" href="dentistas.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Dentistas</h1>
+        <nav>
+            <a href="./../consulta/consultas.html">Consultas</a>
+            <a href="./../cliente/clientes.html">Clientes</a>
+            <a href="./../agenda/agendas.html">Agendas</a>
+            <a class="active">Dentistas</a>
+        </nav>
+    </header>
+
+    <main>
+        <button id="addDentistaBtn">Adicionar Dentista</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CRO</th>
+                    <th>Categoria</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="dentistasTable">
+                <!-- Linhas de dentistas carregadas dinamicamente -->
+            </tbody>
+        </table>
+    </main>
+
+    <div id="dentistaModal" class="modal">
+        <div class="modal-content">
+            <span id="closeDentistaModal" class="close">&times;</span>
+            <h2>Cadastro de Dentista</h2>
+            <form id="dentistaForm">
+                <input type="hidden" id="dentistaId">
+                <label for="dentistaName">Nome:</label>
+                <input type="text" id="dentistaName" required>
+
+                <label for="dentistaCro">CRO:</label>
+                <input type="text" id="dentistaCro" required>
+
+                <label for="dentistaCategory">Categoria:</label>
+                <input type="text" id="dentistaCategory" required>
+
+                <label for="dentistaEndereco">Endereço:</label>
+                <input type="text" id="dentistaEndereco" required>
+
+                <label for="dentistaTelefone">Telefone:</label>
+                <input type="text" id="dentistaTelefone" required>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="dentistas.js"></script>
+</body>
+</html>

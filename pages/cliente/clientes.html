@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Dent&Vida</title>
+    <link rel="stylesheet" href="clientes.css">
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./../consulta/consultas.html">Consultas</a></li>
+                <li><a href="./../agenda/agendas.html">Agendas</a></li>
+                <li><a>Clientes</a></li>
+                <li><a href="./../dentista/dentistas.html">Dentistas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título da Página -->
+    <main>
+        <h1>Gerenciamento de Clientes</h1>
+
+        <!-- Tabela de Clientes (onde os clientes serão exibidos) -->
+        <table id="clientsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Data de Nascimento</th>
+                    <th>Sexo</th>
+                    <th>Endereço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Modal de Cliente -->
+        <div id="clientModal" class="modal">
+            <div class="modal-content">
+                <span id="closeClientModal">&times;</span>
+                <form id="clientForm">
+                    <input type="hidden" id="clientId">
+                    <label for="clientName">Nome:</label>
+                    <input type="text" id="clientName" required>
+
+                    <label for="clientEmail">Email:</label>
+                    <input type="email" id="clientEmail" required>
+
+                    <label for="clientPhone">Telefone:</label>
+                    <input type="text" id="clientPhone" required>
+
+                    <label for="clientBirthdate">Data de Nascimento:</label>
+                    <input type="date" id="clientBirthdate" required>
+
+                    <label for="clientGender">Sexo:</label>
+                    <select id="clientGender" required>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                    </select>
+
+                    <label for="clientAddress">Endereço:</label>
+                    <input type="text" id="clientAddress" required>
+
+                    <button type="submit">Salvar Cliente</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Botão para adicionar cliente -->
+        <button id="addClientBtn">Adicionar Cliente</button>
+    </main>
+
+    <script src="clientes.js"></script>
+</body>
+</html>
